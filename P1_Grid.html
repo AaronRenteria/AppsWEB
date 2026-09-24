@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            /*display: flex;
+            flex-direction: row;*/
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .card-larga{
+            grid-column: 3;
+            grid-row: span 3;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="card" style="background-color: red; width: 250px;">
+            <img src="Francisco.png" alt="">
+            <h1>K goyo</h1>
+
+        </div>
+
+        <div class="card" style="background-color: orange; width: 250px;">
+            <h1>K tranza</h1>
+
+        </div>
+        <div class="card-larga" style="background-color: green; width: 250px;">
+            <h1>K rollo</h1>
+
+        </div>
+        <div class="card" style="background-color: red; width: 250px;">
+            <h1>K pachuca por toluca</h1>
+
+        </div>
+
+        <div class="card" style="background-color: orange; width: 250px;">
+            <h1>Keso</h1>
+
+        </div>
+        <div class="card" style="background-color: green; width: 250px;">
+            <h1>Klk</h1>
+
+        </div>
+        <div class="card" style="background-color: green; width: 250px;">
+            <h1>Keshow</h1>
+
+        </div>
+    </div>
+</body>
+
+</html>
