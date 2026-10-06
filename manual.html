@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manual HTML</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #eee;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #ccc;
+            padding: 15px;
+        }
+
+        nav a {
+            margin: 10px;
+        }
+
+        main {
+            width: 80%;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        article {
+            background-color: #ddd;
+            padding: 10px;
+        }
+
+        aside {
+            background-color: #ccc;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        div {
+            background-color: #ddd;
+            padding: 10px;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi página web</h1>
+        <p>Manual de etiquetas HTML</p>
+    </header>
+
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#info">Información</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+
+    <main id="inicio">
+
+        <section>
+
+            <h2>Información</h2>
+
+            <p>Esta es una sección de mi página.</p>
+
+
+            <article>
+
+                <h3>Artículo</h3>
+
+                <p>
+                    Este es un artículo de ejemplo.
+                </p>
+
+            </article>
+
+
+            <figure>
+
+                <img src="Francisco.png"
+                     alt="Imagen">
+
+                <figcaption>
+                    Imagen de ejemplo
+                </figcaption>
+
+            </figure>
+
+
+            <div>
+
+                <h3>DIV</h3>
+
+                <p>
+                    Este texto está dentro de un div.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <aside>
+
+            <h3>Información adicional</h3>
+
+            <p>
+                Este es un contenido adicional.
+            </p>
+
+        </aside>
+
+
+        <section id="contacto">
+
+            <h2>Formulario</h2>
+
+            <form>
+
+                <label for="nombre">
+                    Nombre:
+                </label>
+
+                <input type="text" id="nombre">
+
+                <br><br>
+
+                <label for="correo">
+                    Correo:
+                </label>
+
+                <input type="email" id="correo">
+
+                <br><br>
+
+                <button>
+                    Enviar
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h2>Tabla</h2>
+
+            <table>
+
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                </tr>
+
+                <tr>
+                    <td>Aaron</td>
+                    <td>21</td>
+                </tr>
+
+                <tr>
+                    <td>Juan</td>
+                    <td>20</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <section>
+
+            <h2>Enlace</h2>
+
+            <a href="https://www.google.com">
+                Ir a Google
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Mi página web</p>
+        
+    </footer>
+
+</body>
+
+</html>
