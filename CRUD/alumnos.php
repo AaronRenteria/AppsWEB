@@ -12,7 +12,7 @@ $query = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de alumnos</title>
+    <title>CRUD</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -20,8 +20,8 @@ $query = mysqli_query($conn, $sql);
 
     <main class="contenedor">
         <header class="encabezado">
-            <h1>Gestión de alumnos</h1>
-            <p>Administra los registros de tus alumnos</p>
+            <h1>CRUD</h1>
+            <p>Fromulario</p>
         </header>
 
         <section class="tabla-contenedor">
@@ -33,7 +33,6 @@ $query = mysqli_query($conn, $sql);
                         <th>Apellido paterno</th>
                         <th>Apellido materno</th>
                         <th>Edad</th>
-                        <th>Acciones</th>
                     </tr>
                 </thead>
 
