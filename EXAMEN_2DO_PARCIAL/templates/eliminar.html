@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar producto</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 15px;
+            margin: auto;
+            width: 80%;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <h1>Eliminar producto</h1>
+
+    <form action="/borrar/{{ producto.id }}" method="POST">
+
+        <h3>¿Deseas eliminar este producto?</h3>
+
+        <p>Nombre: {{ producto.nombre }}</p>
+        <p>Descripción: {{ producto.descripcion }}</p>
+        <p>Precio: ${{ producto.precio }}</p>
+        <p>Stock: {{ producto.stock }}</p>
+
+        <button type="submit" class="btn btn-error">Eliminar</button>
+
+        <a href="/" class="btn btn-ghost">Regresar</a>
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</body>
+</html>

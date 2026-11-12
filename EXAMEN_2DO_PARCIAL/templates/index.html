@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Artículos de Papelería</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form, table {
+            background: white;
+            padding: 15px;
+            margin: auto;
+            width: 80%;
+        }
+
+        input, textarea {
+            width: 98%;
+            padding: 8px;
+            margin: 5px 0 12px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #ddd;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <h1>Artículos de Papelería</h1>
+
+    <form action="/guardar" method="POST">
+
+        <h3>Registrar producto</h3>
+
+        <label>Nombre del producto:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Descripción:</label>
+        <textarea name="descripcion"></textarea>
+
+        <label>Precio:</label>
+        <input type="number" name="precio" step="0.01" min="0" required>
+
+        <label>Stock / Cantidad:</label>
+        <input type="number" name="stock" min="0" required>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+
+    </form>
+
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+        </tr>
+
+        {% for p in productos %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.descripcion }}</td>
+            <td>${{ p.precio }}</td>
+            <td>{{ p.stock }}</td>
+            <td>
+                <a href="/editar/{{ p.id }}">Editar</a>
+                |
+                <a href="/eliminar/{{ p.id }}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>

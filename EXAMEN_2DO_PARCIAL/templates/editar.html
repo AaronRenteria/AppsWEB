@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar producto</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 15px;
+            margin: auto;
+            width: 80%;
+        }
+
+        input, textarea {
+            width: 98%;
+            padding: 8px;
+            margin: 5px 0 12px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <h1>Editar producto</h1>
+
+    <form action="/actualizar/{{ producto.id }}" method="POST">
+
+        <h3>Modificar producto</h3>
+
+        <label>Nombre del producto:</label>
+        <input type="text" name="nombre" value="{{ producto.nombre }}" required>
+
+        <label>Descripción:</label>
+        <textarea name="descripcion" required>{{ producto.descripcion }}</textarea>
+
+        <label>Precio:</label>
+        <input type="number" name="precio" step="0.01" min="0" value="{{ producto.precio }}" required>
+
+        <label>Stock / Cantidad:</label>
+        <input type="number" name="stock" min="0" value="{{ producto.stock }}" required>
+
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+
+        <a href="/" class="btn btn-ghost">Regresar</a>
+
+    </form>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+</html>
